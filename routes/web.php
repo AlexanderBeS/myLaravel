@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/products', ['middleware' => 'product', function(){
+    return view('welcome');
+}]);
+
+
+Route::get('/products', ['middleware' => 'product', function(){
+    return view('welcome');
+}]);
+
+
+Route::get('/form', 'FormController@show');
